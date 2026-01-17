@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>RBXLDevs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- TOAST -->
+<div id="toast" class="toast"></div>
+
+<!-- LOGIN -->
+<section id="loginScreen" class="screen">
+  <div class="card">
+    <h1>RBXLDevs</h1>
+    <input id="username" placeholder="Nome">
+    <input id="password" type="password" placeholder="Senha">
+    <button id="loginBtn">Entrar</button>
+  </div>
+</section>
+
+<!-- APP -->
+<section id="app" class="screen hidden">
+  <div class="panel">
+
+    <header>
+      <div class="user">
+        <img id="pfp" src="https://via.placeholder.com/44" alt="Avatar">
+        <span id="userLabel"></span>
+      </div>
+      <button id="configBtn">⚙️</button>
+    </header>
+
+    <div class="controls">
+      <input id="searchUser" placeholder="Pesquisar...">
+      <select id="roleFilter">
+        <option value="all">Todos</option>
+        <option value="Builder">Builder</option>
+        <option value="Scripter">Scripter</option>
+        <option value="Animator">Animator</option>
+        <option value="UI">UI</option>
+      </select>
+    </div>
+
+    <div id="userList"></div>
+
+    <div id="chatBox" class="chat hidden">
+      <h3 id="chatTitle"></h3>
+      <div id="messages"></div>
+      <div class="send">
+        <input id="msgInput" placeholder="Mensagem">
+        <button id="sendBtn">Enviar</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONFIGURAÇÕES -->
+<div id="configOverlay" class="overlay hidden">
+  <div id="configModal">
+    <h2>Configurações</h2>
+    <label class="fileBtn">
+      Trocar foto
+      <input type="file" accept="image/*" hidden id="pfpInput">
+    </label>
+    <input id="newName" placeholder="Novo nome">
+    <input id="oldPass" type="password" placeholder="Senha antiga">
+    <input id="newPass" type="password" placeholder="Nova senha">
+    <button id="saveConfig">Salvar alterações</button>
+    <button id="logoutBtn">Deslogar</button>
+    <button id="deleteBtn" class="danger">Deletar conta</button>
+    <button id="closeConfigBtn">Fechar</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
